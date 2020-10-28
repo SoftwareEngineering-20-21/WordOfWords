@@ -1,0 +1,19 @@
+﻿<Window x:Class="WorldOfWords.LogIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorldOfWords"
+        mc:Ignorable="d"
+        Title="LogIn" Height="450" Width="800">
+    <Grid>
+        <Label Content="Log In" HorizontalAlignment="Left" Margin="344,65,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <Label Content="email" HorizontalAlignment="Left" Margin="277,183,0,0" VerticalAlignment="Top"/>
+        <Label Content="password" HorizontalAlignment="Left" Margin="277,229,0,0" VerticalAlignment="Top"/>
+        <Button Content="back" HorizontalAlignment="Left" Margin="57,84,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="374,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="374,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Log In" HorizontalAlignment="Left" Margin="389,276,0,0" VerticalAlignment="Top" FontSize="18"/>
+
+    </Grid>
+</Window>

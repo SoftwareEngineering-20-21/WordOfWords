@@ -1,0 +1,23 @@
+﻿<Window x:Class="WorldOfWords.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorldOfWords"
+        mc:Ignorable="d"
+        Title="Register" Height="450" Width="800">
+    <Grid>
+        <Label Content="Register" HorizontalAlignment="Center" Height="76" Margin="0,16,0,0" VerticalAlignment="Top" Width="147" FontSize="36"/>
+        <Label Content="email" HorizontalAlignment="Left" Margin="110,74,0,0" VerticalAlignment="Top"/>
+        <Label Content="name" HorizontalAlignment="Left" Margin="110,123,0,0" VerticalAlignment="Top"/>
+        <Label Content="password" HorizontalAlignment="Left" Margin="110,176,0,0" VerticalAlignment="Top"/>
+        <Label Content="repeat password" HorizontalAlignment="Left" Margin="112,226,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="280,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="280,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="280,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="280,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="back" HorizontalAlignment="Left" Margin="37,34,0,0" VerticalAlignment="Top"/>
+        <Button Content="Register" HorizontalAlignment="Left" Margin="295,281,0,0" VerticalAlignment="Top" Height="31" Width="90"/>
+
+    </Grid>
+</Window>
