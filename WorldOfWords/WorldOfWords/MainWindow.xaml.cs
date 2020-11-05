@@ -25,9 +25,18 @@ namespace WorldOfWords
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
+            LogIn logIn = new LogIn();
+            logIn.ShowDialog();
+            logIn.Close();
+        }
 
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            Register register = new Register();
+            register.ShowDialog();
+            register.Close();
         }
     }
 }

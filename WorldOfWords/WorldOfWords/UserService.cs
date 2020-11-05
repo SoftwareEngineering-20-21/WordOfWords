@@ -7,6 +7,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Windows;
 
 namespace WorldOfWords
 {
@@ -56,7 +57,7 @@ namespace WorldOfWords
         }
         private bool ValidName(string s)
         {
-            Regex regex = new Regex(@"^[a-z]+$");
+            Regex regex = new Regex(@"^[a-z]+ [a-z]+$");
             s = s.ToLower();
             if (regex.IsMatch(s))
             {
@@ -91,9 +92,14 @@ namespace WorldOfWords
                 using (WorldOfWordsContext db = new WorldOfWordsContext())
                 {
                     User new_user = new User { FullName = fullName, Email = email, Password = Hash(password)};
+                    MessageBox.Show(new_user.Id.ToString());
                     db.User.Add(new_user);
                     db.SaveChanges();
                 }
+            }
+            else
+            {
+                MessageBox.Show("Error!");
             }
         }
 

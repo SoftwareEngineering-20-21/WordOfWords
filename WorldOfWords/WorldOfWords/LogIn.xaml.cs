@@ -21,5 +21,10 @@ namespace WorldOfWords
         {
             InitializeComponent();
         }
+
+        private void LogInBackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

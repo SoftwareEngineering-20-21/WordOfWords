@@ -7,17 +7,17 @@
         mc:Ignorable="d"
         Title="Register" Height="450" Width="800">
     <Grid>
-        <Label Content="Register" HorizontalAlignment="Center" Height="76" Margin="0,16,0,0" VerticalAlignment="Top" Width="147" FontSize="36"/>
-        <Label Content="email" HorizontalAlignment="Left" Margin="110,74,0,0" VerticalAlignment="Top"/>
-        <Label Content="name" HorizontalAlignment="Left" Margin="110,123,0,0" VerticalAlignment="Top"/>
-        <Label Content="password" HorizontalAlignment="Left" Margin="110,176,0,0" VerticalAlignment="Top"/>
-        <Label Content="repeat password" HorizontalAlignment="Left" Margin="112,226,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="280,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="280,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="280,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="280,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="back" HorizontalAlignment="Left" Margin="37,34,0,0" VerticalAlignment="Top"/>
-        <Button Content="Register" HorizontalAlignment="Left" Margin="295,281,0,0" VerticalAlignment="Top" Height="31" Width="90"/>
+        <Label Content="Register" HorizontalAlignment="Center" Height="76" Margin="0,-3,0,0" VerticalAlignment="Top" Width="148" FontSize="36"/>
+        <Label Content="email" HorizontalAlignment="Left" Margin="110,74,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="name" HorizontalAlignment="Left" Margin="110,123,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="password" HorizontalAlignment="Left" Margin="110,176,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="repeat password" HorizontalAlignment="Left" Margin="112,226,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="RegisterEmailTextBox" HorizontalAlignment="Left" Margin="280,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="18"/>
+        <TextBox x:Name="RegisterNameTextBox" HorizontalAlignment="Left" Margin="280,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="18"/>
+        <Button x:Name="RegisterBackButton" Content="back" HorizontalAlignment="Left" Margin="22,18,0,0" VerticalAlignment="Top" Height="34" Width="100" FontSize="18" Click="RegisterBackButton_Click"/>
+        <Button x:Name="RegisterButton" Content="Register" HorizontalAlignment="Left" Margin="278,280,0,0" VerticalAlignment="Top" Height="38" Width="124" FontSize="24" Click="RegisterButton_Click"/>
+        <PasswordBox x:Name="RegisterPasswordBox" HorizontalAlignment="Left" Margin="280,184,0,0" VerticalAlignment="Top" Width="120" FontSize="18"/>
+        <PasswordBox x:Name="RegisterRepeatPasswordBox" HorizontalAlignment="Left" Margin="280,234,0,0" VerticalAlignment="Top" Width="120" FontSize="18"/>
 
     </Grid>
 </Window>

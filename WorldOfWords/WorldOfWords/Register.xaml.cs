@@ -21,5 +21,28 @@ namespace WorldOfWords
         {
             InitializeComponent();
         }
+
+        private void RegisterBackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            string name = RegisterNameTextBox.Text;
+            string email = RegisterEmailTextBox.Text;
+            string password = RegisterPasswordBox.Password;
+            string repeatPassword = RegisterRepeatPasswordBox.Password;
+            if (password == repeatPassword)
+            {
+                UserService userService = new UserService();
+                userService.AddUser(name, email, password);
+                MessageBox.Show("Registration successful!", "WorldOfWords", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+
+            }
+        }
     }
 }
