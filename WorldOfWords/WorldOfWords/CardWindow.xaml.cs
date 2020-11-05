@@ -15,9 +15,9 @@ namespace WorldOfWords
     /// <summary>
     /// Interaction logic for Card.xaml
     /// </summary>
-    public partial class Card : Window
+    public partial class CardWindow : Window
     {
-        public Card()
+        public CardWindow()
         {
             InitializeComponent();
         }
