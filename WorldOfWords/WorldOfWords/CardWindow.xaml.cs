@@ -13,18 +13,13 @@ using System.Windows.Shapes;
 namespace WorldOfWords
 {
     /// <summary>
-    /// Interaction logic for LogIn.xaml
+    /// Interaction logic for Card.xaml
     /// </summary>
-    public partial class LogIn : Window
+    public partial class CardWindow : Window
     {
-        public LogIn()
+        public CardWindow()
         {
             InitializeComponent();
-        }
-
-        private void LogInBackButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }

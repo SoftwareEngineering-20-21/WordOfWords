@@ -29,8 +29,13 @@ namespace WorldOfWords
             }
         }
 
+        [Obsolete]
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ForNpgsqlUseIdentityColumns();
+            modelBuilder.Entity<User>()
+            .Property(f => f.Id)
+            .ValueGeneratedOnAdd();
             modelBuilder.Entity<Card>(entity =>
             {
                 entity.ToTable("card");

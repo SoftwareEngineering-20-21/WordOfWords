@@ -12,8 +12,8 @@
             <RowDefinition/>
             <RowDefinition Height="13*"/>
         </Grid.RowDefinitions>
-        <Button Content="Register" HorizontalAlignment="Center" Margin="0,103,0,0" Grid.Row="2" VerticalAlignment="Top" Height="56" Width="136" Click="Button_Click" FontSize="24"/>
-        <Button Content="Log In" HorizontalAlignment="Center" Margin="0,186,0,0" Grid.Row="2" VerticalAlignment="Top" Height="62" Width="136" FontSize="24"/>
+        <Button x:Name="RegisterButton" Content="Register" HorizontalAlignment="Center" Margin="0,103,0,0" Grid.Row="2" VerticalAlignment="Top" Height="56" Width="136" FontSize="24" Click="RegisterButton_Click"/>
+        <Button x:Name="LogInButton" Content="Log In" HorizontalAlignment="Center" Margin="0,186,0,0" Grid.Row="2" VerticalAlignment="Top" Height="62" Width="136" FontSize="24" Click="LogInButton_Click"/>
         <Label Content="World Of Words" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="48"/>
     </Grid>
 </Window>
