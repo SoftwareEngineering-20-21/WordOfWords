@@ -26,5 +26,26 @@ namespace WorldOfWords
         {
             this.Close();
         }
+
+        private void LogInButton_Click(object sender, RoutedEventArgs e)
+        {
+            string email = LogInEmailBox.Text;
+            string password = LogInPasswordBox.Password;
+            UserService user = new UserService();
+            int id = user.VerifyUser(email, password);
+            if (id != -1)
+            {
+                MessageBox.Show("Login successful!", "WorldOfWords", MessageBoxButton.OK, MessageBoxImage.Information);
+                this.Close();
+                Topics topics = new Topics();
+                topics.Show();
+                topics.UserNameLabel.Content = email;
+            }
+            else
+            {
+                MessageBox.Show("Incorrect login or password!", "WorldOfWords", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+        }
     }
 }

@@ -92,7 +92,6 @@ namespace WorldOfWords
                 using (WorldOfWordsContext db = new WorldOfWordsContext())
                 {
                     User new_user = new User { FullName = fullName, Email = email, Password = Hash(password)};
-                    MessageBox.Show(new_user.Id.ToString());
                     db.User.Add(new_user);
                     db.SaveChanges();
                 }
@@ -109,8 +108,15 @@ namespace WorldOfWords
             {
                 try
                 {
-                    User record = db.User.Single(user => (user.Email == email) && Verify(password, user.Password));
-                    return record.Id;
+                    User record = db.User.Single(user => (user.Email == email));
+                    if (Verify(password, record.Password))
+                    {
+                        return record.Id;
+                    }
+                    else
+                    {
+                        return -1;
+                    }
                 }
                 catch (Exception e)
                 {
