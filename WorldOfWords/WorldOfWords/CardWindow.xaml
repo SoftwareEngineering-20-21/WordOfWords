@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Card" Height="450" Width="800">
     <Grid>
-        
+        <Label x:Name="TopicLabel" Content="Label" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>

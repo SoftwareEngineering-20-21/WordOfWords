@@ -21,5 +21,9 @@ namespace WorldOfWords
         {
             InitializeComponent();
         }
+
+        public Topic topic;
+
+
     }
 }
