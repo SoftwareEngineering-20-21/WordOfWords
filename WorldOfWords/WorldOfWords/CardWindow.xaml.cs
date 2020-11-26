@@ -17,13 +17,36 @@ namespace WorldOfWords
     /// </summary>
     public partial class CardWindow : Window
     {
+        List<Card> cards = new List<Card>();
+        public Topic topic;
+
+        bool isFliped = false;
         public CardWindow()
-        {
+        {            
             InitializeComponent();
         }
 
-        public Topic topic;
+        public CardWindow(Topic _topic)
+        {
+            InitializeComponent();
+            this.topic = _topic;
+            TopicLabel.Content = topic.Name;
+            CardService cservice = new CardService();
+            cards = cservice.GetCardsByTopic(topic.Id);
 
+            var rnd = new Random();
 
+            cardDefinition.Text = cards[0].Description;
+        }
+
+        
+
+        void flip_isClicked(object sender, RoutedEventArgs e)
+        {
+            //if (isFliped)
+            //{ 
+            //    cardDefinition.Text = topic.Des
+            //}
+        }
     }
 }

@@ -29,9 +29,7 @@ namespace WorldOfWords
         {
             Topic topic = args.AddedItems[0] as Topic;
             this.Close();
-            CardWindow cardWindow = new CardWindow();
-            cardWindow.topic = topic;
-            cardWindow.TopicLabel.Content = topic.Name;
+            CardWindow cardWindow = new CardWindow(topic);           
             cardWindow.Show();
         }
     }
