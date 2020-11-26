@@ -15,5 +15,10 @@ namespace WorldOfWords
         public string Name { get; set; }
 
         public virtual ICollection<Card> Card { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

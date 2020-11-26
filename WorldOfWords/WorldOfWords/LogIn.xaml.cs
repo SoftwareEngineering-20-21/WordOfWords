@@ -29,6 +29,11 @@ namespace WorldOfWords
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
+
+        }
+
+        private void LogInButton_Click_1(object sender, RoutedEventArgs e)
+        {
             string email = LogInEmailBox.Text;
             string password = LogInPasswordBox.Password;
             UserService user = new UserService();
@@ -45,7 +50,6 @@ namespace WorldOfWords
             {
                 MessageBox.Show("Incorrect login or password!", "WorldOfWords", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
         }
     }
 }

@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="Topics" Height="450" Width="800">
     <Grid>
-        
+        <Label x:Name="UserNameLabel" Content="Label" HorizontalAlignment="Left" Margin="383,30,0,0" VerticalAlignment="Top"/>
+        <ListBox Name="TopicsListBox" />
+
     </Grid>
 </Window>

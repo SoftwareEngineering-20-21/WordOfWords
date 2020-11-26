@@ -20,6 +20,19 @@ namespace WorldOfWords
         public Topics()
         {
             InitializeComponent();
+            TopicService topicService = new TopicService();
+            TopicsListBox.ItemsSource = topicService.GetAllTopics();
+            TopicsListBox.SelectionChanged += selectionHandler;
+        }
+
+        void selectionHandler(object sender, SelectionChangedEventArgs args)
+        {
+            Topic topic = args.AddedItems[0] as Topic;
+            this.Close();
+            CardWindow cardWindow = new CardWindow();
+            cardWindow.topic = topic;
+            cardWindow.TopicLabel.Content = topic.Name;
+            cardWindow.Show();
         }
     }
 }
