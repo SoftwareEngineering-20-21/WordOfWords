@@ -85,20 +85,46 @@ namespace WorldOfWords
             }
             return false;
         }
-        public void AddUser(string fullName, string email, string password)
+        public bool AddUser(string fullName, string email, string password)
         {
-            if (ValidName(fullName) && ValidEmail(email) && ValidPassword(password))
+            bool IsValidName = ValidName(fullName);
+            bool isValidEmail = ValidEmail(email);
+            bool isValidPassword = ValidPassword(password);
+            if (isValidEmail && isValidPassword && IsValidName)
             {
                 using (WorldOfWordsContext db = new WorldOfWordsContext())
                 {
-                    User new_user = new User { FullName = fullName, Email = email, Password = Hash(password)};
-                    db.User.Add(new_user);
-                    db.SaveChanges();
+                    try
+                    {
+                        User new_user = new User { FullName = fullName, Email = email, Password = Hash(password)};
+                        db.User.Add(new_user);
+                        db.SaveChanges();
+                        return true;
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("This email already taken!", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
+                        return false;
+                    }
                 }
             }
             else
             {
-                MessageBox.Show("Error!");
+                if (!isValidEmail)
+                {
+                    MessageBox.Show("Invalid email!", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                if (!IsValidName)
+                {
+                    MessageBox.Show("Invalid name!", "Error!",  MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                if (!isValidPassword)
+                {
+                    MessageBox.Show("Password must contains minimun 8 character, lowercase, capital letter and special symbol!", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                return false;
             }
         }
 
