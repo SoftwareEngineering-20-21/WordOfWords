@@ -25,7 +25,7 @@ namespace WorldOfWords
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=worldOfWords;Username=postgres;Password=05qfmy2lsb");
+                optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=WorldofWords;Username=postgres;Password=kekmem");
             }
         }
 
@@ -76,10 +76,10 @@ namespace WorldOfWords
                 entity.ToTable("user");
 
                 entity.Property(e => e.Id).HasColumnName("id");
-
                 entity.Property(e => e.Email)
                     .HasColumnName("email")
-                    .HasColumnType("character varying");
+                    .HasColumnType("character varying").IsRequired();
+                entity.HasIndex(e => e.Email).IsUnique();
 
                 entity.Property(e => e.FullName)
                     .HasColumnName("full_name")
@@ -91,15 +91,13 @@ namespace WorldOfWords
             });
 
             modelBuilder.Entity<UserCard>(entity =>
-            {
-                entity.HasKey(e => e.UserId)
-                    .HasName("user_card_pkey");
-
+            {                
                 entity.ToTable("user_card");
+                entity.Property(e => e.Id).HasColumnName("id");
+                entity.HasIndex(e => e.Id).IsUnique();
 
                 entity.Property(e => e.UserId)
-                    .HasColumnName("user_id")
-                    .ValueGeneratedOnAdd();
+                    .HasColumnName("user_id");
 
                 entity.Property(e => e.Answer).HasColumnName("answer");
 

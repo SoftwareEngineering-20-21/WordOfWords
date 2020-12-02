@@ -28,6 +28,7 @@ namespace WorldOfWords
         private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
             LogIn logIn = new LogIn();
+            this.Close();
             logIn.ShowDialog();
             logIn.Close();
         }
@@ -35,6 +36,7 @@ namespace WorldOfWords
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
             Register register = new Register();
+            this.Close();
             register.ShowDialog();
             register.Close();
         }

@@ -24,6 +24,8 @@ namespace WorldOfWords
 
         private void RegisterBackButton_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
             this.Close();
         }
 
@@ -36,12 +38,19 @@ namespace WorldOfWords
             if (password == repeatPassword)
             {
                 UserService userService = new UserService();
-                userService.AddUser(name, email, password);
-                MessageBox.Show("Registration successful!", "WorldOfWords", MessageBoxButton.OK, MessageBoxImage.Information);
+                var isAdded = userService.AddUser(name, email, password);
+                if (isAdded)
+                {
+                    MessageBox.Show("Registration successful!", "WorldOfWords", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Topics topics = new Topics();
+                    topics.Show();
+                    this.Close();
+                    topics.UserNameLabel.Content = email;
+                }
             }
             else
             {
-
+                MessageBox.Show("Passwords don't match!", "WorldOfWords", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }
