@@ -12,12 +12,12 @@
         <Label Content="name" HorizontalAlignment="Left" Margin="110,123,0,0" VerticalAlignment="Top" FontSize="18"/>
         <Label Content="password" HorizontalAlignment="Left" Margin="110,176,0,0" VerticalAlignment="Top" FontSize="18"/>
         <Label Content="repeat password" HorizontalAlignment="Left" Margin="112,226,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <TextBox x:Name="RegisterEmailTextBox" HorizontalAlignment="Left" Margin="280,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="18"/>
-        <TextBox x:Name="RegisterNameTextBox" HorizontalAlignment="Left" Margin="280,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="18"/>
-        <Button x:Name="RegisterBackButton" Content="back" HorizontalAlignment="Left" Margin="22,18,0,0" VerticalAlignment="Top" Height="34" Width="100" FontSize="18" Click="RegisterBackButton_Click"/>
+        <TextBox x:Name="RegisterEmailTextBox" HorizontalAlignment="Left" Margin="280,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" FontSize="18"/>
+        <TextBox x:Name="RegisterNameTextBox" HorizontalAlignment="Left" Margin="280,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" FontSize="18"/>
+        <PasswordBox x:Name="RegisterPasswordBox" HorizontalAlignment="Left" Margin="280,184,0,0" VerticalAlignment="Top" Width="214" FontSize="18"/>
+        <PasswordBox x:Name="RegisterRepeatPasswordBox" HorizontalAlignment="Left" Margin="280,234,0,0" VerticalAlignment="Top" Width="214" FontSize="18"/>
         <Button x:Name="RegisterButton" Content="Register" HorizontalAlignment="Left" Margin="278,280,0,0" VerticalAlignment="Top" Height="38" Width="124" FontSize="24" Click="RegisterButton_Click"/>
-        <PasswordBox x:Name="RegisterPasswordBox" HorizontalAlignment="Left" Margin="280,184,0,0" VerticalAlignment="Top" Width="120" FontSize="18"/>
-        <PasswordBox x:Name="RegisterRepeatPasswordBox" HorizontalAlignment="Left" Margin="280,234,0,0" VerticalAlignment="Top" Width="120" FontSize="18"/>
+        <Button x:Name="RegisterBackButton" Content="back" HorizontalAlignment="Left" Margin="22,18,0,0" VerticalAlignment="Top" Height="34" Width="100" FontSize="18" Click="RegisterBackButton_Click"/>
 
     </Grid>
 </Window>
