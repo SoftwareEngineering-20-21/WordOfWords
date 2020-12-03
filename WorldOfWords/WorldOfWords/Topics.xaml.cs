@@ -17,9 +17,11 @@ namespace WorldOfWords
     /// </summary>
     public partial class Topics : Window
     {
-        public Topics()
+        int userId;
+        public Topics(int id)
         {
             InitializeComponent();
+            userId = id;
             TopicService topicService = new TopicService();
             TopicsListBox.ItemsSource = topicService.GetAllTopics();
             TopicsListBox.SelectionChanged += selectionHandler;
@@ -28,9 +30,18 @@ namespace WorldOfWords
         void selectionHandler(object sender, SelectionChangedEventArgs args)
         {
             Topic topic = args.AddedItems[0] as Topic;
-            this.Close();
-            CardWindow cardWindow = new CardWindow(topic);           
-            cardWindow.Show();
+            UserCardService userCardService = new UserCardService();
+            CardService cardService = new CardService();
+            var cards = cardService.GetCardsByTopic(topic.Id);
+            int cnt = userCardService.getCountRightAnswers(cards, userId);
+            if (cnt == cards.Count)
+            {
+                MessageBox.Show("Нема шо вчити!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            CardWindow cardWindow = new CardWindow(topic, userId);
+            cardWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            cardWindow.ShowDialog();
         }
     }
 }

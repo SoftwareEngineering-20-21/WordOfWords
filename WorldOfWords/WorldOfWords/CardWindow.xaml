@@ -8,12 +8,13 @@
         Title="Card" Height="450" Width="800">
     <Grid Name="grid">
         <Label x:Name="TopicLabel" Foreground="Gray" FontSize="14" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="747,10,0,0"/>
-        <Button Content="FLIP" HorizontalAlignment="Center" Margin="0,309,0,0" VerticalAlignment="Top" Height="54" Width="110" Background="LightGreen" Click="flip_isClicked"/>
-        <TextBox Name="cardDefinition" HorizontalAlignment="Left" Height="136" Margin="79,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="605"/>
-        <Button Content="Next" HorizontalAlignment="Left" Margin="573,317,0,0" VerticalAlignment="Top" Height="47" Width="111"/>
-        <Button Content="Previous" HorizontalAlignment="Left" Margin="79,317,0,0" VerticalAlignment="Top" Height="47" Width="111"/>
-        <Label Content="Card Name" Foreground="DarkGreen" FontSize="22" HorizontalAlignment="Left" Height="53" Margin="345,62,0,0" VerticalAlignment="Top" Width="138"/>
-        <Button Content="Exit" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="29" Width="62"/>
+        <Button x:Name="cardFlipButton" Content="FLIP" HorizontalAlignment="Left" Margin="359,76,0,0" VerticalAlignment="Top" Height="54" Width="110" Background="LightGreen" Click="flip_isClicked" FontSize="36"/>
+        <TextBox Name="cardDefinition" HorizontalAlignment="Left" Height="136" Margin="139,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="605" FontSize="18"/>
+        <Button x:Name="cardRightButton" Content="Right" HorizontalAlignment="Left" Margin="440,349,0,0" VerticalAlignment="Top" Height="47" Width="110" FontSize="24" Click="cardRightButton_Click"/>
+        <Button x:Name="cardWrongButton" Content="Wrong" HorizontalAlignment="Left" Margin="275,349,0,0" VerticalAlignment="Top" Height="47" Width="111" Click="cardWrongButton_Click" FontSize="24"/>
+        <Label x:Name="cardCardNameLabel" Content="?????????????" Foreground="DarkGreen" FontSize="22" HorizontalAlignment="Left" Height="53" Margin="345,135,0,0" VerticalAlignment="Top" Width="138"/>
+        <Button x:Name="cardExitButton" Content="Back" HorizontalAlignment="Left" Margin="30,17,0,0" VerticalAlignment="Top" Height="29" Width="62" FontSize="18" Click="cardExitButton_Click"/>
+        <Label x:Name="progressBarLabel" Content="Label" HorizontalAlignment="Left" Margin="706,85,0,0" VerticalAlignment="Top" FontSize="18"/>
 
     </Grid>
 </Window>
