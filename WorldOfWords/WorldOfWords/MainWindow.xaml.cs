@@ -29,7 +29,7 @@ namespace WorldOfWords
         {
             LogIn logIn = new LogIn();
             this.Close();
-            logIn.ShowDialog();
+            logIn.WindowStartupLocation = WindowStartupLocation.CenterScreen; logIn.ShowDialog();
             logIn.Close();
         }
 
@@ -37,6 +37,7 @@ namespace WorldOfWords
         {
             Register register = new Register();
             this.Close();
+            register.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             register.ShowDialog();
             register.Close();
         }

@@ -26,7 +26,7 @@ namespace WorldOfWords
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
@@ -43,9 +43,9 @@ namespace WorldOfWords
             if (id != -1)
             {
                 MessageBox.Show("Login successful!", "WorldOfWords", MessageBoxButton.OK, MessageBoxImage.Information);
-                Topics topics = new Topics();
+                Topics topics = new Topics(id);
                 topics.Show();
-                this.Close();
+                this.Hide();
                 topics.UserNameLabel.Content = email;
             }
             else
