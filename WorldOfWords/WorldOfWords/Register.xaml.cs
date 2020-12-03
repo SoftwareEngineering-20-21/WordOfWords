@@ -42,10 +42,9 @@ namespace WorldOfWords
                 if (isAdded)
                 {
                     MessageBox.Show("Registration successful!", "WorldOfWords", MessageBoxButton.OK, MessageBoxImage.Information);
-                    Topics topics = new Topics();
-                    topics.Show();
-                    this.Close();
-                    topics.UserNameLabel.Content = email;
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+                    this.Hide();
                 }
             }
             else

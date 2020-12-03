@@ -127,9 +127,7 @@ namespace WorldOfWords.Migrations
                     b.HasIndex("Id")
                         .IsUnique();
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
-
+                    b.HasIndex("UserId");
                     b.ToTable("user_card");
                 });
 
